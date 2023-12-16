@@ -6,6 +6,11 @@
     --secondary-color: rgb(19, 22, 11);
 }
 
+p{
+    margin: 0;
+    padding: 0;
+}
+
 html, body{
     font-family: 'Outfit', sans-serif;
 }
@@ -34,3 +39,61 @@ nav {
 }
 
 /* End Nav Styles */
+
+/* Carousel Styles */
+
+#carouselExample{
+    height: 661px;
+}
+
+#carouselExample img{
+    height: 661px;
+    object-fit: cover;
+}
+
+/* End Carousel Styles */
+
+/* Carousel Bottom Styles */
+
+#carousel-bottom{
+    background-color: var(--dark-primary);
+    color: white;
+    overflow: hidden;
+    padding: 15px 0;
+    height: 70px;
+
+    position: relative;
+}
+
+.bottom-container{
+    display: flex;
+    align-items: center;
+
+    width: 3000px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+
+    animation: move-bottom 2s infinite linear reverse;
+}
+
+.bottom-container i{
+    color: var(--primary-color);
+    font-size: 16px;
+    margin: 0 10px;
+}
+
+.bottom-container p{
+    letter-spacing: .1em;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+@keyframes move-bottom {
+    from {
+        right: -350px;
+    }
+    to {
+        right: -725px;
+    }
+}
