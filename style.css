@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
+
+:root {
+    --primary-color: rgb(186, 241, 32);
+    --dark-primary: #13160B;
+    --secondary-color: rgb(19, 22, 11);
+}
+
+html, body{
+    font-family: 'Outfit', sans-serif;
+}
+
+/* Nav Styles */
+
+nav {
+    background-color: var(--dark-primary);
+}
+
+.nav-item{
+    display: flex;
+    align-items: center;
+    margin: 0 15px;
+}
+
+.nav-link{
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: white !important;
+}
+
+.nav-item i{
+    font-size: 11px;
+}
+
+/* End Nav Styles */
