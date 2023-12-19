@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&display=swap');
+
 
 :root {
     --primary-color: rgb(186, 241, 32);
@@ -12,7 +13,7 @@ p{
 }
 
 html, body{
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Syne', sans-serif;
 }
 
 /* Nav Styles */
@@ -29,7 +30,7 @@ nav {
 
 .nav-link{
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 600;
     text-transform: uppercase;
     color: white !important;
 }
@@ -53,6 +54,54 @@ nav {
 
 /* End Carousel Styles */
 
+/* Carousel Overlay Styles */
+
+.carousel-item{
+    position: relative;
+}
+
+.overlay-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.overlay {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+
+    color: white;
+}
+
+.overlay small{
+    text-transform: uppercase;
+    letter-spacing: .19em;
+    font-size: 1.3em;
+}
+
+.overlay h2{
+    font-weight: 700;
+    max-width: 500px;
+    font-size: 4em;
+}
+
+.overlay button{
+    background-color: var(--primary-color);
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    padding: 15px 35px;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+/* End Carousel Overlay Styles */
+
 /* Carousel Bottom Styles */
 
 #carousel-bottom{
@@ -69,7 +118,8 @@ nav {
     display: flex;
     align-items: center;
 
-    width: 3000px;
+    
+    width: 3500px;
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
@@ -91,9 +141,9 @@ nav {
 
 @keyframes move-bottom {
     from {
-        right: -350px;
+        right: -460px;
     }
     to {
-        right: -725px;
+        right: -890px;
     }
 }
