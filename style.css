@@ -161,6 +161,161 @@ nav {
     font-weight: 700;
 }
 
+/* End Carousel Bottom Styles */
+
+/* Publicity Styles*/
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-gap: 30px;
+    grid-auto-rows: minmax(50px, auto);
+    padding: 30px;
+}
+
+.grid-container > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 28px;
+    padding: 30px;
+    background-size: 110% 100%;
+    transition: all 1.4s ease-out;
+    background-position: center center;
+    cursor: pointer;
+}
+
+.grid-container > div:hover{
+    background-size: 120% 110%;
+}
+
+.grid-container > div h3{
+    font-weight: 700 !important;
+}
+
+.grid-container > div h3.up{
+    padding: 15px 30px;
+    border-radius: 30px 30px 30px 0;
+    width: 100%;
+    background-color: white;
+    margin-bottom: 0;
+}
+
+.grid-container > div h3.down{
+    position: relative;
+    padding: 15px 30px;
+    padding-top: 0;
+    border-radius: 0px 0 30px 30px;
+
+    background-color: white;
+}
+
+.grid-container > div h3.down::before{
+    content: " ";
+    width: 21px;
+    height: 21px;
+    background-image: url(images/descarga.svg);
+    position: absolute;
+    top: 0;
+    right: -21px;
+}
+
+.grid-container button {
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    padding: 12px 25px;
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 20px;
+
+    transition-duration: .2s;
+}
+
+.grid-container button.green{
+    background-color: var(--primary-color);
+}
+
+grid-container button.white {
+    background-color: white;
+}
+
+.grid-container button:hover{
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+
+.run{
+    grid-column: 1 / 7;
+    grid-row: 1 / 6;
+
+    background-image: url(images/m1_banner_04.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    align-items: start;
+}
+
+.basket{
+    grid-column: 7 / 11;
+    grid-row: 1 / 5;
+    background-image: url(images/m1_banner_06.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    align-items: start;
+}
+
+.basket h3{
+    font-size: 24px !important;
+    max-width: 61%;
+}
+
+.sport h3{ 
+    font-size: 35px;
+}
+
+.performance h3{
+    font-size: 35px;
+
+}
+
+.sport{
+    grid-column: 1 / 4;
+    grid-row: 6 / 10;
+    background-image: url(images/m1_banner_05.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.performance{
+    grid-column: 4 / 7;
+    grid-row: 6 /10;
+    background-color: var(--primary-color);
+
+    align-items: start;
+    color: white;
+
+    font-size: 40px;
+}
+
+.box{
+    grid-column: 7 / 11;
+    grid-row: 5 / 10;
+    background-image: url(images/m1_banner_07.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    align-items: start;
+}
+
+
+/* End Publicity Styles */
+
 @keyframes move-bottom {
     from {
         right: -460px;
@@ -178,5 +333,97 @@ nav {
     to {
         opacity: 1;
         margin-right: 0;
+    }
+}
+
+/* Media queries */
+
+@media (max-width: 1200px) {
+    .run{
+        grid-column: 1 / 11;
+        grid-row: 1 / 7;
+    }
+
+    .sport{
+        grid-column: 1 / 6;
+        grid-row: 7 / 11;
+    }
+
+    .performance{
+        grid-column: 6 / 11;
+        grid-row: 7 /11;
+    }
+
+    .basket{
+        grid-column: 1 / 11;
+        grid-row: 11 / 18;
+    }
+
+    .box{
+        grid-column: 1 / 11;
+        grid-row: 18 / 28;
+    }
+}
+
+@media (max-width: 778px) {
+    .run{
+        grid-column: 1 / 11;
+        grid-row: 1 / 4;
+    }
+
+    .sport{
+        grid-column: 1 / 11;
+        grid-row: 4 / 10;
+    }
+
+    .performance{
+        grid-column: 1 / 11;
+        grid-row: 10 / 15;
+    }
+
+    .basket{
+        grid-column: 1 / 11;
+        grid-row: 15 / 19;
+    }
+
+    .box{
+        grid-column: 1 / 11;
+        grid-row: 19 / 25;
+    }
+}
+
+
+
+@media (max-width: 550px) {
+    .overlay{
+        padding: 0 50px;
+    }
+    .overlay h2{
+        font-size: 2.8em;
+    }
+
+    .grid-container > div h3.down::before{
+        display: none;
+    }
+
+    .grid-container > div h3.up{
+        border-radius: 30px 30px 0px 0;
+    }
+    
+    .grid-container > div h3.down{
+        width: 100%;
+        border-radius: 0px 0 30px 30px;
+    }
+}
+
+
+@media (max-width: 380px) {
+    .overlay h2{
+        font-size: 2.5em;
+    }
+
+    .overlay button{
+        padding: 10px 20px;
+        font-size: 15px;
     }
 }
